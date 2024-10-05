@@ -1,14 +1,5 @@
 {
-  "name": "vite-project",
-  "version": "0.0.0",
   "devDependencies": {
-    "sass": "^1.78.0",
-    "gh-pages": "^4.0.0"
-  },
-  "scripts": {
-    "dev": "vite",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
-    "build": "vite build"
+    "sass": "^1.78.0"
   }
 }
