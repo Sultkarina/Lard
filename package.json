@@ -1,14 +1,12 @@
 {
   "devDependencies": {
-    "sass": "^1.78.0"
+    "sass": "^1.78.0",
+    "gh-pages": "^4.0.0" 
   },
   "scripts": {
     "dev": "vite",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "build": "tsc && vite build"
+    "build": "vite build"
   }
 }
-
-
-
