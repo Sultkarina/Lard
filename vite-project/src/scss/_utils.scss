@@ -1,0 +1,39 @@
+.page__content {
+    display: flex;
+    justify-content: space-between; 
+    padding: 20px 20px; 
+    gap: 30px; 
+ 
+}
+
+.sidebar {
+    background-color: var(--color-white); 
+    padding: 40px;   
+    &__right {
+        height: fit-content;
+    }
+    
+}
+
+.sidebar:first-child {
+    flex: 3; 
+}
+
+.sidebar:last-child {
+    flex: 1; 
+}
+
+.sidebar__divider {
+    width: calc(100% + 2 * var(--container-padding-x)); 
+    margin-left: calc(-1 * var(--container-padding-x)); 
+    border: none;
+    border-top: 1px solid  var(--color-line);
+
+    &__padding {  width:100%; 
+        border: none;
+        border-top: 1px solid var(--color-line);
+        margin-bottom: 20px;
+       }
+}
+
+

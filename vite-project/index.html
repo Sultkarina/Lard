@@ -1,13 +1,238 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JS Vite Template</title>
-  </head>
-  <body>
-    <div id="app">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JS Vite Template</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="page__content">
+    <div class="sidebar">
+      <div class="sidebar__search">
+        <input type="text" class="search-input" placeholder="Поиск сотрудника" aria-label="Search employee">
+        <button class="search-button" aria-label="Search">
+          <img src="/images/favicon/find.svg" width="18" height="18" alt="Search">
+        </button>
+      </div>
+      <span class="search-example">Например: Ивано Иван</span>
+
+      <hr class="sidebar__divider">
+
+      <h1 class="sidebar__title">Список сотрудников</h1>
+      <div class="filter-buttons">
+        <button class="filter-button filter-button--all">Весь список</button>
+        <button class="filter-button filter-button--problems">Проблемные</button>
+        <button class="filter-button filter-button--critical">Критические</button>
+        <button class="filter-button filter-button--notes">Есть замечания</button>
+        <button class="filter-button filter-button--done">Выполнено</button>
+      </div>
+
+
+      <div class="employees">
+        <!-- Сотрудник 1 -->
+        <div class="employee">
+          <div class="employee__details">
+            <div class="employee__name">Константинопольский Константин Константинович</div>
+            <input type="text" class="employee__inn" placeholder="ИНН 1234567890" aria-label="ИНН">
+            <div class="employee__department" data-value="smz">СМЗ</div>
+            <div class="employee__position">промышленный альпинист</div>
+          </div>
+          <div class="employee__info">
+            <img src="/images/ru.png" alt="russia" class="employee__photo">
+            <div class="employee__details">
+              <div class="employee__info-text">RU 4002 571654</div>
+              <div class="employee__info-line"></div>
+              <div class="employee__info-text">г. Санкт-Петербург</div>
+              <div class="employee__info-line"></div>
+              <div class="employee__info-text">Дата рождения: 23.06.2001</div>
+              <div class="employee__info-line"></div>
+              <div class="employee__info-text">Возраст: 21 год</div>
+              <div class="employee__info-line"></div>
+              <div class="employee__info-text">Пол: мужской</div>
+            </div>
+          </div>
+          <div class="employee__rows">
+            <div class="employee__row employee__row--critical">Истекают все документы</div>
+          </div>
+        </div>
+
+        <!-- Сотрудник 2 -->
+        <div class="employee">
+          <div class="employee__details">
+            <div class="employee__name">Иванов Иван Иванович</div>
+            <input type="text" class="employee__inn" placeholder="ИНН 1234567890" aria-label="ИНН">
+            <div class="employee__department" data-value="td">ТД</div>
+            <div class="employee__position">промышленный альпинист</div>
+          </div>
+          <div class="employee__info">
+            <img src="/images/tj.png" alt="Tajikistan" class="employee__photo">
+            <div class="employee__details">
+              <div class="employee__info-text">TJ 404020262</div>
+              <div class="employee__info-line"></div>
+              <div class="employee__info-text">г. Санкт-Петербург</div>
+              <div class="employee__info-line"></div>
+              <div class="employee__info-text">Дата рождения: 23.06.2001</div>
+              <div class="employee__info-line"></div>
+              <div class="employee__info-text">Возраст: 21 год</div>
+              <div class="employee__info-line"></div>
+              <div class="employee__info-text">Пол: мужской</div>
+            </div>
+          </div>
+          <div class="employee__rows">
+            <div class="employee__row employee__row--problems">Истекает патент</div>
+          </div>
+        </div>
+
+        <!-- Сотрудник 3 -->
+        <div class="employee">
+          <div class="employee__details">
+            <div class="employee__name">Константинопольский Константин Константинович</div>
+            <input type="text" class="employee__inn" placeholder="ИНН 1234567890" aria-label="ИНН">
+            <div class="employee__department" data-value="smz">СМЗ</div>
+            <div class="employee__position">промышленный альпинист</div>
+          </div>
+          <div class="employee__info">
+            <img src="/images/ru.png" alt="russia" class="employee__photo">
+            <div class="employee__details">
+              <div class="employee__info-text">RU 4002 571654</div>
+              <div class="employee__info-line"></div>
+              <div class="employee__info-text">г. Санкт-Петербург</div>
+              <div class="employee__info-line"></div>
+              <div class="employee__info-text">Дата рождения: 23.06.2001</div>
+              <div class="employee__info-line"></div>
+              <div class="employee__info-text">Возраст: 21 год</div>
+              <div class="employee__info-line"></div>
+              <div class="employee__info-text">Пол: мужской</div>
+            </div>
+          </div>
+          <div class="employee__rows">
+            <div class="employee__row employee__row--problems">Истекает патент</div>
+          </div>
+        </div>
+
+        <!-- Сотрудник 4 -->
+        <div class="employee">
+          <div class="employee__details">
+            <div class="employee__name">Иванов Иван Иванович</div>
+            <input type="text" class="employee__inn" placeholder="ИНН 1234567890" aria-label="ИНН">
+            <div class="employee__department" data-value="gph">ГПХ</div>
+            <div class="employee__position">промышленный альпинист</div>
+          </div>
+          <div class="employee__info">
+            <img src="/images/tj.png" alt="Tajikistan" class="employee__photo">
+            <div class="employee__details">
+              <div class="employee__info-text">TJ 404020262</div>
+              <div class="employee__info-line"></div>
+              <div class="employee__info-text">г. Санкт-Петербург</div>
+              <div class="employee__info-line"></div>
+              <div class="employee__info-text">Дата рождения: 23.06.2001</div>
+              <div class="employee__info-line"></div>
+              <div class="employee__info-text">Возраст: 21 год</div>
+              <div class="employee__info-line"></div>
+              <div class="employee__info-text">Пол: мужской</div>
+            </div>
+          </div>
+          <div class="employee__rows">
+            <div class="employee__row employee__row--notes">Пропустил медосмотр</div>
+          </div>
+        </div>
+
+
+        <!-- Сотрудник 5 -->
+        <div class="employee">
+          <div class="employee__details">
+            <div class="employee__name">Константинопольский Константин Константинович</div>
+            <input type="text" class="employee__inn" placeholder="ИНН 1234567890" aria-label="ИНН">
+            <div class="employee__department" data-value="smz" > СМЗ</div>
+            <div class="employee__position">промышленный альпинист</div>
+          </div>
+          <div class="employee__info">
+            <img src="/images/ru.png" alt="russia" class="employee__photo">
+            <div class="employee__details">
+              <div class="employee__info-text">RU 4002 571654</div>
+              <div class="employee__info-line"></div>
+              <div class="employee__info-text">г. Санкт-Петербург</div>
+              <div class="employee__info-line"></div>
+              <div class="employee__info-text">Дата рождения: 23.06.2001</div>
+              <div class="employee__info-line"></div>
+              <div class="employee__info-text">Возраст: 21 год</div>
+              <div class="employee__info-line"></div>
+              <div class="employee__info-text">Пол: мужской</div>
+            </div>
+          </div>
+          <div class="employee__rows">
+            <div class="employee__row employee__row--done">Прошел все процедуры</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="show-more">
+        <button class="show-more__button">
+          <img src="/images/reverse.svg" width="18" height="18" alt="Reverse">Показать еще</button>
+      </div>
     </div>
-    <script type="module" src="/src/js/main.js"></script>
-  </body>
+
+    <div class="sidebar sidebar__right">
+      <div class="sidebar__button">
+        <button class="sidebar__button__new"><img src="/images/new-employee.svg" width="18" height="18"
+            alt="Reverse">Добавить нового сотрудника</button>
+      </div>
+      <hr class="sidebar__divider">
+      <h1 class="sidebar__title">Фильтр</h1>
+      <form class="form">
+        <div class="filter-form">
+        <div class="filter-form__group">
+          <label for="citizenship" class="filter-form__label">Гражданство</label>
+          <select id="citizenship" class="filter-form__select">
+            <option value="all">Все страны</option>
+            <option value="russia">Россия</option>
+            <option value="Tajikistan">Таджикистан</option>
+          </select>
+        </div>
+        <div class="filter-form__group">
+          <label for="gender" class="filter-form__label">Пол</label>
+          <select id="gender" class="filter-form__select">
+            <option value="all">Без разницы</option>
+            <option value="all">Мужской</option>
+            <option value="all">Женский</option>
+          </select>
+        </div>
+      </div>
+        <div class="filter-form__group">
+          <label for="position" class="filter-form__label">Должность</label>
+          <select id="position" class="filter-form__select">
+            <option value="all">Все должности</option>
+          </select>
+        </div>
+        <div class="filter-form__group">
+          <p class="filter-form__label">Тип договора</p>
+          <div class="filter-form__checkboxes">
+            <label><input class="filter-form__checkbox" type="checkbox" name="contract" value="td"> ТД</label>
+            <label><input class="filter-form__checkbox" type="checkbox" name="contract" value="gph"> ГПХ</label>
+            <label><input class="filter-form__checkbox" type="checkbox" name="contract" value="smz"> СМЗ</label>
+            <label><input class="filter-form__checkbox" type="checkbox" name="contract" value="candidate"> Кандидат</label>
+          </div>
+        </div>
+        <hr class="sidebar__divider__padding">
+        <div class="filter-form__buttons">
+        <button type="submit" class="filter-form__apply">Применить</button>
+        <button type="reset" class="filter-form__reset">Очистить</button>
+      </div>
+      </form>
+    </div>
+  </div>
+
+
+
+  </div>
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+
 </html>
